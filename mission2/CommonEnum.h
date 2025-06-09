@@ -1,0 +1,73 @@
+#pragma once
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable: 4996)
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <vector>
+using namespace std;
+
+#define CLEAR_SCREEN "\033[H\033[2J"
+#define MENU_DELAY_TIME 800
+#define TEST_DELAY_TIME 1500
+#define PRODUCT_DELAY_TIME 2000
+#define BACK_TO_MENU 0
+
+enum QUESTION_TYPE
+{
+    CAR_TYPE_Q,
+    ENGINE_SYSTEM_Q,
+    BREAK_SYSTEM_Q,
+    STEERING_SYSTEM_Q,
+    RUN_TEST,
+};
+
+enum CAR_TYPE
+{
+    SEDAN = 1,
+    SUV,
+    TRUCK
+};
+
+enum ENGINE_SYSTEM_TYPE
+{
+    INIT_ENGINE_TYPEE = BACK_TO_MENU,
+    GM = 1,
+    TOYOTA,
+    WIA,
+    BROKEN_ENGINE,
+    END_OF_ENGINE_TYPE = BROKEN_ENGINE
+};
+
+enum BRAKE_SYSTEM_TYPE
+{
+    INIT_BREAK_SYSTEM = BACK_TO_MENU,
+    MANDO = 1,
+    CONTINENTAL,
+    BOSCH_B,
+    END_OF_BREAK_SYSTEM_TYPE = BOSCH_B
+};
+
+enum STEERING_SYSTEM_TYPE
+{
+    INIT_STEERING_SYSTEM = BACK_TO_MENU,
+    BOSCH_S = 1,
+    MOBIS,
+    END_OF_STEERING_SYSTEM_TYPE = MOBIS
+};
+
+enum TEST_SYSTEM_TYPE
+{
+    INIT_TEST_SYSTEM = BACK_TO_MENU,
+    RUN_PRODUCT_CAR,
+    RUN_TEST_CAR,
+    END_OF_TEST_SYSTEM_TYPE = RUN_TEST_CAR
+};
+
+enum ANSWER_TYPE
+{
+    EXIT_MENU = 0,
+    NOT_NUMBER = 1,
+    NUMBER = 2
+};
